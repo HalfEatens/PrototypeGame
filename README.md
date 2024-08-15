@@ -1,6 +1,8 @@
 
 # Game Prototype
 
+## Please ignore current UI and how things work
+
 **Combat system:** 
 Initially will be like Pokemon, however we will change to be more like Naruto online mixed with a few other games.
 
