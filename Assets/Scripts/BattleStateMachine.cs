@@ -42,4 +42,9 @@ public class BattleStateMachine : MonoBehaviour
             break;
         }
     }
+
+    public void CollectActions(HandleTurns input)
+    {
+        performList.Add(input);
+    }
 }
