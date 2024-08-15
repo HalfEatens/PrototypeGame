@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class EnemySelectButton : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject EnemyPrefab;
 
-    // Update is called once per frame
-    void Update()
+    public void SelectEnemy()
     {
+        GameObject.Find("BattleManager").GetComponent<BattleStateMachine>(); //save input of enemy prefab
         
     }
+    
 }
