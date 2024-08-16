@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public class BaseEnemy
+public class BaseClass
 {
-    public string name;
+    public string theName;
 
     public enum Type
     {
@@ -23,7 +22,7 @@ public class BaseEnemy
         EPIC
     }
 
-    public Type EnemyType;
+    public Type classType;
     public Rarity rarity;
 
     public float baseHP;
@@ -34,8 +33,10 @@ public class BaseEnemy
 
     public float baseATK;
     public float curATK;
+
     public float baseDEF;
     public float curDEF;
-    public int speed;
-    public int agility;
+
+    public float speed;
+    public float agility;
 }

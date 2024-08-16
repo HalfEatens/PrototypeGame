@@ -19,9 +19,10 @@ public class EnemyStateMachine : MonoBehaviour
     public TurnState currentState;
     //for the progress bar
     private float currentCooldown = 0f;
-    private float maxCooldown = 2f;
+    private float maxCooldown = 10f;
     //this gameobject
     private Vector3 startPosition;
+    public GameObject Selector;
     //time for action stuffs
     private bool actionStarted = false;
     public GameObject HeroToAttack;
@@ -30,6 +31,7 @@ public class EnemyStateMachine : MonoBehaviour
     void Start()
     {
         currentState = TurnState.PROCESSING;
+        Selector.SetActive(false);
         BSM = GameObject.Find("BattleManager").GetComponent<BattleStateMachine>();
         startPosition = transform.position;
     }
@@ -71,7 +73,7 @@ public class EnemyStateMachine : MonoBehaviour
     void ChooseAction()
     {
         HandleTurns myAttack = new HandleTurns();
-        myAttack.Attacker = enemy.name;
+        myAttack.Attacker = enemy.theName;
         myAttack.Type = "Enemy";
         myAttack.AttackersGameObject = this.gameObject;
         myAttack.AttackersTarget = BSM.HerosInBattle[Random.Range(0, BSM.HerosInBattle.Count)];

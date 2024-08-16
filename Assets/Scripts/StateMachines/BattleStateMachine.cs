@@ -134,7 +134,7 @@ public class BattleStateMachine : MonoBehaviour
             EnemyStateMachine currentEnemy = enemy.GetComponent<EnemyStateMachine>();
 
             TMP_Text buttonText = newButton.GetComponentInChildren<TMP_Text>();
-            buttonText.text = currentEnemy.enemy.name;
+            buttonText.text = currentEnemy.enemy.theName;
 
             button.EnemyPrefab = enemy;
 

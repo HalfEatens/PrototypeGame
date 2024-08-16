@@ -22,7 +22,7 @@ public class HeroStateMachine : MonoBehaviour
     public TurnState currentState;
     //for the progress bar
     private float currentCooldown = 0f;
-    private float maxCooldown = 2f;
+    private float maxCooldown = 7f;
     public Image ProgressBar;
     public GameObject Selector;
     //IeNumerator
