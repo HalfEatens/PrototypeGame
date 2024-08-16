@@ -24,10 +24,13 @@ public class HeroStateMachine : MonoBehaviour
     private float currentCooldown = 0f;
     private float maxCooldown = 2f;
     public Image ProgressBar;
+    public GameObject Selector;
 
 
     void Start()
     {
+        currentCooldown = Random.Range(0, 2.5f); //probs dont want this (luck stat)
+        Selector.SetActive(false);
         BSM = GameObject.Find("BattleManager").GetComponent<BattleStateMachine>();
         currentState = TurnState.PROCESSING;
     }
