@@ -25,7 +25,7 @@ public class EnemyStateMachine : MonoBehaviour
     //time for action stuffs
     private bool actionStarted = false;
     public GameObject HeroToAttack;
-    private float animSpeed = 5f;
+    private float animSpeed = 10f;
 
     void Start()
     {
