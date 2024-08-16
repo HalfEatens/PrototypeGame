@@ -77,12 +77,14 @@ public class BattleStateMachine : MonoBehaviour
 
                 if(performList[0].Type == "Hero")
                 {
-                    Debug.Log("Hero is here to perform");
+                    HeroStateMachine HSM = performer.GetComponent<HeroStateMachine>();
+                    HSM.EnemyToAttack = performList[0].AttackersTarget;
+                    HSM.currentState = HeroStateMachine.TurnState.ACTION;
                 }
                 battleStates = PerformAction.PERFORMACTION;
             break;
             case (PerformAction.PERFORMACTION):
-
+                //idle
             break;
         }
 
