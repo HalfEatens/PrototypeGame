@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEditor.VersionControl;
 
 public class BattleStateMachine : MonoBehaviour
 {
@@ -71,8 +72,22 @@ public class BattleStateMachine : MonoBehaviour
                 if(performList[0].Type == "Enemy")
                 {
                     EnemyStateMachine ESM = performer.GetComponent<EnemyStateMachine>();
-                    ESM.HeroToAttack = performList[0].AttackersTarget;
-                    ESM.currentState = EnemyStateMachine.TurnState.ACTION;
+                        for(int i = 0; i < HerosInBattle.Count; i++)
+                        {
+                            if(performList[0].AttackersTarget == HerosInBattle[i])
+                            {
+                                ESM.HeroToAttack = performList[0].AttackersTarget;
+                                ESM.currentState = EnemyStateMachine.TurnState.ACTION;
+                                break;
+                            }
+                            else
+                            {
+                                performList[0].AttackersTarget = HerosInBattle[Random.Range(0,HerosInBattle.Count)];
+                                ESM.HeroToAttack = performList[0].AttackersTarget;
+                                ESM.currentState = EnemyStateMachine.TurnState.ACTION;
+                            }
+                        }
+
                 }
 
                 if(performList[0].Type == "Hero")

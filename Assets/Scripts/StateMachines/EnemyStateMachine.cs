@@ -20,7 +20,7 @@ public class EnemyStateMachine : MonoBehaviour
     public TurnState currentState;
     //for the progress bar
     private float currentCooldown = 0f;
-    private float maxCooldown = 10f;
+    private float maxCooldown = 5f;
     //this gameobject
     private Vector3 startPosition;
     public GameObject Selector;

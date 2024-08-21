@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -22,7 +23,7 @@ public class HeroStateMachine : MonoBehaviour
     public TurnState currentState;
     //for the progress bar
     private float currentCooldown = 0f;
-    private float maxCooldown = 7f;
+    private float maxCooldown = 5f;
     public Image ProgressBar;
     public GameObject Selector;
     //IeNumerator
@@ -30,6 +31,8 @@ public class HeroStateMachine : MonoBehaviour
     private bool actionStarted = false;
     private Vector3 startPosition;
     private float animSpeed = 10f;
+    //dead
+    private bool alive = true;
 
     void Start()
     {
@@ -60,7 +63,37 @@ public class HeroStateMachine : MonoBehaviour
                 StartCoroutine(TimeForAction());
             break;
             case (TurnState.DEAD):
-
+                if (!alive)
+                {
+                    return;
+                }
+                else
+                {
+                    // change tag
+                    this.gameObject.tag = "DeadHero";
+                    // not attackable
+                    BSM.HerosInBattle.Remove(this.gameObject);
+                    //not managable
+                    BSM.HeroesToManage.Remove(this.gameObject);
+                    //deactivate selector
+                    Selector.SetActive(false);
+                    //reset gui
+                    BSM.AttackPanel.SetActive(false);
+                    BSM.EnemySelectPanel.SetActive(false);
+                    //remove from list
+                    for (int i = 0; 1 < BSM.performList.Count; i++)
+                    {
+                        if(BSM.performList[i].AttackersGameObject == this.gameObject)
+                        {
+                            BSM.performList.Remove(BSM.performList[i]);
+                        }
+                    }
+                    //change color or something (dead animation)
+                    this.gameObject.GetComponent<Renderer>().material.color = Color.grey;
+                    //reset input
+                    BSM.HeroInput = BattleStateMachine.HeroGUI.ACTIVATE;
+                    alive = false;
+                }
             break;
         }
     }

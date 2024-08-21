@@ -148,7 +148,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 127369715970832155, guid: 999747f847c4b0e4bb53ba7337e8123f, type: 3}
       propertyPath: enemy.curATK
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 127369715970832155, guid: 999747f847c4b0e4bb53ba7337e8123f, type: 3}
       propertyPath: enemy.curDEF
@@ -168,7 +168,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 127369715970832155, guid: 999747f847c4b0e4bb53ba7337e8123f, type: 3}
       propertyPath: enemy.baseATK
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 127369715970832155, guid: 999747f847c4b0e4bb53ba7337e8123f, type: 3}
       propertyPath: enemy.baseDEF
@@ -508,7 +508,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 127369715970832155, guid: 999747f847c4b0e4bb53ba7337e8123f, type: 3}
       propertyPath: enemy.curATK
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 127369715970832155, guid: 999747f847c4b0e4bb53ba7337e8123f, type: 3}
       propertyPath: enemy.curDEF
@@ -528,7 +528,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 127369715970832155, guid: 999747f847c4b0e4bb53ba7337e8123f, type: 3}
       propertyPath: enemy.baseATK
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 127369715970832155, guid: 999747f847c4b0e4bb53ba7337e8123f, type: 3}
       propertyPath: enemy.baseDEF
@@ -2560,7 +2560,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1260990514031230645, guid: 40e791950403f7246b17e8e27936bc0b, type: 3}
       propertyPath: hero.curHP
-      value: 1000
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1260990514031230645, guid: 40e791950403f7246b17e8e27936bc0b, type: 3}
       propertyPath: hero.speed
@@ -2572,7 +2572,7 @@ PrefabInstance:
       objectReference: {fileID: 1646269918}
     - target: {fileID: 1260990514031230645, guid: 40e791950403f7246b17e8e27936bc0b, type: 3}
       propertyPath: hero.baseHP
-      value: 1000
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1260990514031230645, guid: 40e791950403f7246b17e8e27936bc0b, type: 3}
       propertyPath: hero.curATK
@@ -2674,7 +2674,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1260990514031230645, guid: 40e791950403f7246b17e8e27936bc0b, type: 3}
       propertyPath: hero.curHP
-      value: 1000
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1260990514031230645, guid: 40e791950403f7246b17e8e27936bc0b, type: 3}
       propertyPath: hero.speed
@@ -2686,7 +2686,7 @@ PrefabInstance:
       objectReference: {fileID: 1822680076}
     - target: {fileID: 1260990514031230645, guid: 40e791950403f7246b17e8e27936bc0b, type: 3}
       propertyPath: hero.baseHP
-      value: 1000
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1260990514031230645, guid: 40e791950403f7246b17e8e27936bc0b, type: 3}
       propertyPath: hero.curATK
@@ -2890,7 +2890,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1260990514031230645, guid: 40e791950403f7246b17e8e27936bc0b, type: 3}
       propertyPath: hero.curHP
-      value: 1000
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1260990514031230645, guid: 40e791950403f7246b17e8e27936bc0b, type: 3}
       propertyPath: hero.speed
@@ -2902,7 +2902,7 @@ PrefabInstance:
       objectReference: {fileID: 473828417}
     - target: {fileID: 1260990514031230645, guid: 40e791950403f7246b17e8e27936bc0b, type: 3}
       propertyPath: hero.baseHP
-      value: 1000
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1260990514031230645, guid: 40e791950403f7246b17e8e27936bc0b, type: 3}
       propertyPath: hero.curATK
@@ -3192,7 +3192,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 127369715970832155, guid: 999747f847c4b0e4bb53ba7337e8123f, type: 3}
       propertyPath: enemy.curATK
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 127369715970832155, guid: 999747f847c4b0e4bb53ba7337e8123f, type: 3}
       propertyPath: enemy.curDEF
@@ -3212,7 +3212,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 127369715970832155, guid: 999747f847c4b0e4bb53ba7337e8123f, type: 3}
       propertyPath: enemy.baseATK
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 127369715970832155, guid: 999747f847c4b0e4bb53ba7337e8123f, type: 3}
       propertyPath: enemy.baseDEF
