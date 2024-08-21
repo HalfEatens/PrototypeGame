@@ -16,10 +16,11 @@ public class BaseClass
 
     public enum Rarity
     {
-        COMMON,
-        UNCOMMON,
-        RARE,
-        EPIC
+        COMMON = 1,
+        UNCOMMON = 2,
+        RARE = 3,
+        EPIC = 4,
+        LEGENDARY = 5
     }
 
     public Type classType;
@@ -39,4 +40,6 @@ public class BaseClass
 
     public float speed;
     public float agility;
+
+    public List<BaseAttack> attacks = new List<BaseAttack>();
 }

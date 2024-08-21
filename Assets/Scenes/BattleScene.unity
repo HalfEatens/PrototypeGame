@@ -182,6 +182,14 @@ PrefabInstance:
       propertyPath: enemy.classType
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 127369715970832155, guid: 999747f847c4b0e4bb53ba7337e8123f, type: 3}
+      propertyPath: enemy.attacks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 127369715970832155, guid: 999747f847c4b0e4bb53ba7337e8123f, type: 3}
+      propertyPath: enemy.attacks.Array.data[0]
+      value: 
+      objectReference: {fileID: 3030674076032507107, guid: a3de21dde000607439ac69253dc2b119, type: 3}
     - target: {fileID: 7707711352112079603, guid: 999747f847c4b0e4bb53ba7337e8123f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.09
@@ -530,6 +538,14 @@ PrefabInstance:
       propertyPath: enemy.classType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 127369715970832155, guid: 999747f847c4b0e4bb53ba7337e8123f, type: 3}
+      propertyPath: enemy.attacks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 127369715970832155, guid: 999747f847c4b0e4bb53ba7337e8123f, type: 3}
+      propertyPath: enemy.attacks.Array.data[0]
+      value: 
+      objectReference: {fileID: 3030674076032507107, guid: a3de21dde000607439ac69253dc2b119, type: 3}
     - target: {fileID: 7707711352112079603, guid: 999747f847c4b0e4bb53ba7337e8123f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.02
@@ -3194,6 +3210,14 @@ PrefabInstance:
       propertyPath: enemy.theName
       value: ' Enemy 1'
       objectReference: {fileID: 0}
+    - target: {fileID: 127369715970832155, guid: 999747f847c4b0e4bb53ba7337e8123f, type: 3}
+      propertyPath: enemy.attacks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 127369715970832155, guid: 999747f847c4b0e4bb53ba7337e8123f, type: 3}
+      propertyPath: enemy.attacks.Array.data[0]
+      value: 
+      objectReference: {fileID: 3030674076032507107, guid: a3de21dde000607439ac69253dc2b119, type: 3}
     - target: {fileID: 7707711352112079603, guid: 999747f847c4b0e4bb53ba7337e8123f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.05
