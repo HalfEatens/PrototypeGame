@@ -46,5 +46,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackName: Basic Attack
   attackDescription: 
-  attackDamage: 100
+  attackDamage: 0
   attackCost: 0

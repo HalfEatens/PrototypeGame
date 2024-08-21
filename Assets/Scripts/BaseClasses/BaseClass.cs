@@ -25,6 +25,12 @@ public class BaseClass
 
     public Type classType;
     public Rarity rarity;
+    public int rarityValue
+    {
+        get {return (int)rarity;}
+    }
+
+    public float lvl = 1;
 
     public float baseHP;
     public float curHP;

@@ -82,7 +82,7 @@ public class EnemyStateMachine : MonoBehaviour
         int num = Random.Range(0, enemy.attacks.Count);
         myAttack.chosenAttack = enemy.attacks[num];
 
-        Debug.Log(this.gameObject.name + " has chosen " + myAttack.chosenAttack.attackName + " and deals " + myAttack.chosenAttack.attackDamage + " damage");
+        //Debug.Log(this.gameObject.name + " has chosen " + myAttack.chosenAttack.attackName + " and deals " + myAttack.chosenAttack.attackDamage + " damage");
 
         BSM.CollectActions(myAttack);
     }
@@ -141,7 +141,8 @@ public class EnemyStateMachine : MonoBehaviour
 
     void DoDamage()
     {
-        float calc_damage = enemy.curATK + BSM.performList[0].chosenAttack.attackDamage;
+        float calc_damage = enemy.curATK + Mathf.Pow(enemy.rarityValue, 1/3f)*Mathf.Pow(enemy.lvl, 1.5f) + BSM.performList[0].chosenAttack.attackDamage;
         HeroToAttack.GetComponent<HeroStateMachine>().TakeDamage(calc_damage);
+        Debug.Log(this.gameObject.name + " did " + calc_damage + " damage to " + HeroToAttack.name);
     }
 }

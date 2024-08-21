@@ -131,6 +131,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 127369715970832155, guid: 999747f847c4b0e4bb53ba7337e8123f, type: 3}
+      propertyPath: enemy.lvl
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 127369715970832155, guid: 999747f847c4b0e4bb53ba7337e8123f, type: 3}
       propertyPath: enemy.curHP
       value: 50
       objectReference: {fileID: 0}
@@ -144,7 +148,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 127369715970832155, guid: 999747f847c4b0e4bb53ba7337e8123f, type: 3}
       propertyPath: enemy.curATK
-      value: 20
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 127369715970832155, guid: 999747f847c4b0e4bb53ba7337e8123f, type: 3}
       propertyPath: enemy.curDEF
@@ -164,7 +168,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 127369715970832155, guid: 999747f847c4b0e4bb53ba7337e8123f, type: 3}
       propertyPath: enemy.baseATK
-      value: 20
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 127369715970832155, guid: 999747f847c4b0e4bb53ba7337e8123f, type: 3}
       propertyPath: enemy.baseDEF
@@ -487,6 +491,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 127369715970832155, guid: 999747f847c4b0e4bb53ba7337e8123f, type: 3}
+      propertyPath: enemy.lvl
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 127369715970832155, guid: 999747f847c4b0e4bb53ba7337e8123f, type: 3}
       propertyPath: enemy.curHP
       value: 150
       objectReference: {fileID: 0}
@@ -500,7 +508,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 127369715970832155, guid: 999747f847c4b0e4bb53ba7337e8123f, type: 3}
       propertyPath: enemy.curATK
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 127369715970832155, guid: 999747f847c4b0e4bb53ba7337e8123f, type: 3}
       propertyPath: enemy.curDEF
@@ -512,7 +520,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 127369715970832155, guid: 999747f847c4b0e4bb53ba7337e8123f, type: 3}
       propertyPath: enemy.rarity
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 127369715970832155, guid: 999747f847c4b0e4bb53ba7337e8123f, type: 3}
       propertyPath: enemy.agility
@@ -520,7 +528,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 127369715970832155, guid: 999747f847c4b0e4bb53ba7337e8123f, type: 3}
       propertyPath: enemy.baseATK
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 127369715970832155, guid: 999747f847c4b0e4bb53ba7337e8123f, type: 3}
       propertyPath: enemy.baseDEF
@@ -2552,7 +2560,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1260990514031230645, guid: 40e791950403f7246b17e8e27936bc0b, type: 3}
       propertyPath: hero.curHP
-      value: 125
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 1260990514031230645, guid: 40e791950403f7246b17e8e27936bc0b, type: 3}
       propertyPath: hero.speed
@@ -2564,7 +2572,7 @@ PrefabInstance:
       objectReference: {fileID: 1646269918}
     - target: {fileID: 1260990514031230645, guid: 40e791950403f7246b17e8e27936bc0b, type: 3}
       propertyPath: hero.baseHP
-      value: 125
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 1260990514031230645, guid: 40e791950403f7246b17e8e27936bc0b, type: 3}
       propertyPath: hero.curATK
@@ -2666,7 +2674,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1260990514031230645, guid: 40e791950403f7246b17e8e27936bc0b, type: 3}
       propertyPath: hero.curHP
-      value: 75
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 1260990514031230645, guid: 40e791950403f7246b17e8e27936bc0b, type: 3}
       propertyPath: hero.speed
@@ -2678,7 +2686,7 @@ PrefabInstance:
       objectReference: {fileID: 1822680076}
     - target: {fileID: 1260990514031230645, guid: 40e791950403f7246b17e8e27936bc0b, type: 3}
       propertyPath: hero.baseHP
-      value: 75
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 1260990514031230645, guid: 40e791950403f7246b17e8e27936bc0b, type: 3}
       propertyPath: hero.curATK
@@ -2882,7 +2890,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1260990514031230645, guid: 40e791950403f7246b17e8e27936bc0b, type: 3}
       propertyPath: hero.curHP
-      value: 125
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 1260990514031230645, guid: 40e791950403f7246b17e8e27936bc0b, type: 3}
       propertyPath: hero.speed
@@ -2894,7 +2902,7 @@ PrefabInstance:
       objectReference: {fileID: 473828417}
     - target: {fileID: 1260990514031230645, guid: 40e791950403f7246b17e8e27936bc0b, type: 3}
       propertyPath: hero.baseHP
-      value: 125
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 1260990514031230645, guid: 40e791950403f7246b17e8e27936bc0b, type: 3}
       propertyPath: hero.curATK
@@ -3167,6 +3175,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 127369715970832155, guid: 999747f847c4b0e4bb53ba7337e8123f, type: 3}
+      propertyPath: enemy.lvl
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 127369715970832155, guid: 999747f847c4b0e4bb53ba7337e8123f, type: 3}
       propertyPath: enemy.curHP
       value: 100
       objectReference: {fileID: 0}
@@ -3180,7 +3192,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 127369715970832155, guid: 999747f847c4b0e4bb53ba7337e8123f, type: 3}
       propertyPath: enemy.curATK
-      value: 5
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 127369715970832155, guid: 999747f847c4b0e4bb53ba7337e8123f, type: 3}
       propertyPath: enemy.curDEF
@@ -3191,12 +3203,16 @@ PrefabInstance:
       value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 127369715970832155, guid: 999747f847c4b0e4bb53ba7337e8123f, type: 3}
+      propertyPath: enemy.rarity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 127369715970832155, guid: 999747f847c4b0e4bb53ba7337e8123f, type: 3}
       propertyPath: enemy.agility
       value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 127369715970832155, guid: 999747f847c4b0e4bb53ba7337e8123f, type: 3}
       propertyPath: enemy.baseATK
-      value: 5
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 127369715970832155, guid: 999747f847c4b0e4bb53ba7337e8123f, type: 3}
       propertyPath: enemy.baseDEF
@@ -3284,5 +3300,5 @@ SceneRoots:
   - {fileID: 796484701}
   - {fileID: 93873852}
   - {fileID: 1712405638081907977}
-  - {fileID: 1998227530}
   - {fileID: 1909832396}
+  - {fileID: 1998227530}

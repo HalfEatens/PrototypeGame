@@ -7,7 +7,7 @@ public class BasicAttack : BaseAttack
     public BasicAttack()
     {
         attackName = "Basic Attack";
-        attackDamage = 100f;
+        attackDamage = 0;
         attackCost = 0;
     }
     
