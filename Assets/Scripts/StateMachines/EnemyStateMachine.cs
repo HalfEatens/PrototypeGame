@@ -145,4 +145,13 @@ public class EnemyStateMachine : MonoBehaviour
         HeroToAttack.GetComponent<HeroStateMachine>().TakeDamage(calc_damage);
         Debug.Log(this.gameObject.name + " did " + calc_damage + " damage to " + HeroToAttack.name);
     }
+
+    public void TakeDamage(float getDamageAmount)
+    {
+        enemy.curHP -= getDamageAmount;
+        if(enemy.curHP <= 0)
+        {
+            currentState = TurnState.DEAD;
+        }
+    }
 }
