@@ -1486,6 +1486,7 @@ MonoBehaviour:
   ActionSpacer: {fileID: 448502643}
   AbilitySpacer: {fileID: 1588481618}
   ActionButton: {fileID: 850076441358139551, guid: 0bf192ade2934b943a3e6e7abd9fabfa, type: 3}
+  AbilityButton: {fileID: 4049475258172254480, guid: 947e6a9c3e5eb704f90aed4c3e9da98e, type: 3}
 --- !u!4 &1497351585
 Transform:
   m_ObjectHideFlags: 0
@@ -1743,6 +1744,14 @@ PrefabInstance:
       propertyPath: hero.classType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1260990514031230645, guid: 40e791950403f7246b17e8e27936bc0b, type: 3}
+      propertyPath: hero.AbilityAttacks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1260990514031230645, guid: 40e791950403f7246b17e8e27936bc0b, type: 3}
+      propertyPath: hero.AbilityAttacks.Array.data[0]
+      value: 
+      objectReference: {fileID: 8915838595793812188, guid: aef130c5e69fd4d43b3fec1684f606a6, type: 3}
     - target: {fileID: 2201183826163448858, guid: 40e791950403f7246b17e8e27936bc0b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.26
@@ -2080,6 +2089,14 @@ PrefabInstance:
       propertyPath: hero.classType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1260990514031230645, guid: 40e791950403f7246b17e8e27936bc0b, type: 3}
+      propertyPath: hero.AbilityAttacks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1260990514031230645, guid: 40e791950403f7246b17e8e27936bc0b, type: 3}
+      propertyPath: hero.AbilityAttacks.Array.data[0]
+      value: 
+      objectReference: {fileID: -8169417104401326517, guid: a0c5703dc8c6b354a9538e02218d59de, type: 3}
     - target: {fileID: 2201183826163448858, guid: 40e791950403f7246b17e8e27936bc0b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.26

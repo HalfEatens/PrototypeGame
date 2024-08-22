@@ -48,4 +48,6 @@ public class BaseClass
     public float agility;
 
     public List<BaseAttack> attacks = new List<BaseAttack>();
+
+    public List<BaseAttack> AbilityAttacks = new List<BaseAttack>();
 }

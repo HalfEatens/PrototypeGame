@@ -48,6 +48,7 @@ public class BattleStateMachine : MonoBehaviour
     public Transform ActionSpacer;
     public Transform AbilitySpacer;
     public GameObject ActionButton;
+    public GameObject AbilityButton;
     private List<GameObject> atkBtns = new List<GameObject>();
 
     void Start()
@@ -211,10 +212,46 @@ public class BattleStateMachine : MonoBehaviour
         atkBtns.Add(AttackButton);
 
         GameObject AbilityAttackButton = Instantiate(ActionButton) as GameObject;
-        TMP_Text AbilityButtonText = AbilityAttackButton.transform.Find("Text").gameObject.GetComponent<TMP_Text>();
-        AttackButtonText.text = "Abilities";
-        //
+        TMP_Text AbilityAttackButtonText = AbilityAttackButton.transform.Find("Text").gameObject.GetComponent<TMP_Text>();
+        AbilityAttackButtonText.text = "Abilities";
+        AbilityAttackButton.GetComponent<Button>().onClick.AddListener(() => Input3());
         AbilityAttackButton.transform.SetParent(ActionSpacer, false);
         atkBtns.Add(AbilityAttackButton);
+
+        if (HeroesToManage[0].GetComponent<HeroStateMachine>().hero.AbilityAttacks.Count > 0)
+        {
+            foreach(BaseAttack abilAtk in HeroesToManage[0].GetComponent<HeroStateMachine>().hero.AbilityAttacks)
+            {
+                GameObject abilityButton = Instantiate(AbilityButton) as GameObject;
+                TMP_Text abilityButtonText = abilityButton.transform.Find("Text").gameObject.GetComponent<TMP_Text>();
+                abilityButtonText.text = abilAtk.attackName;
+                AttackButton ATB = abilityButton.GetComponent<AttackButton>();
+                ATB.abilityAttackToPerform = abilAtk;
+                abilityButton.transform.SetParent(AbilitySpacer, false);
+                atkBtns.Add(abilityButton);
+
+            }
+        }
+        else
+        {
+            AbilityAttackButton.GetComponent<Button>().interactable = false;
+        }
+    }
+
+    public void Input4(BaseAttack chosenAbility)//chosen ability attack
+    {
+        HeroChoice.Attacker = HeroesToManage[0].name;
+        HeroChoice.AttackersGameObject = HeroesToManage[0];
+        HeroChoice.Type = "Hero";
+
+        HeroChoice.chosenAttack = chosenAbility;
+        AbilityPanel.SetActive(false);
+        EnemySelectPanel.SetActive(true);
+    }
+
+    public void Input3()//switching to ability atk
+    {
+        AttackPanel.SetActive(false);
+        AbilityPanel.SetActive(true);
     }
 }
