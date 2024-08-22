@@ -123,6 +123,7 @@ MonoBehaviour:
     theName: BaseHero
     classType: 3
     rarity: 0
+    lvl: 1
     baseHP: 0
     curHP: 0
     baseMOM: 0
@@ -133,10 +134,11 @@ MonoBehaviour:
     curDEF: 0
     speed: 0
     agility: 0
+    attacks: []
   currentState: 0
-  ProgressBar: {fileID: 0}
   Selector: {fileID: 2823324208789504206}
   EnemyToAttack: {fileID: 0}
+  HeroPanel: {fileID: 7827961297035867103, guid: 7a16c6f26ba314e4390e3eda5ad02e92, type: 3}
 --- !u!1001 &5000267296909776716
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -24,7 +24,7 @@ public class HeroStateMachine : MonoBehaviour
     //for the progress bar
     private float currentCooldown = 0f;
     private float maxCooldown = 5f;
-    public Image ProgressBar;
+    private Image ProgressBar;
     public GameObject Selector;
     //IeNumerator
     public GameObject EnemyToAttack;
@@ -33,11 +33,20 @@ public class HeroStateMachine : MonoBehaviour
     private float animSpeed = 10f;
     //dead
     private bool alive = true;
+    //heropanel
+    private HeroPanelStats stats;
+    public GameObject HeroPanel;
+    private Transform HeroPanelSpacer;
 
     void Start()
     {
+        //find spacer 
+        HeroPanelSpacer = GameObject.Find("BattleCanvas").transform.Find("HeroPanel").transform.Find("HeroPanelSpacer");
+        //create panel fill in info
+        CreateHeroPanel();
+        
         startPosition = transform.position;
-        currentCooldown = Random.Range(0, 2.5f); //probs dont want this (luck stat)
+        //currentCooldown = Random.Range(0, 2.5f); //probs dont want this (luck stat)
         Selector.SetActive(false);
         BSM = GameObject.Find("BattleManager").GetComponent<BattleStateMachine>();
         currentState = TurnState.PROCESSING;
@@ -168,7 +177,27 @@ public class HeroStateMachine : MonoBehaviour
 
         if(hero.curHP <= 0)
         {
+            hero.curHP = 0;
             currentState = TurnState.DEAD;
         }
+        UpdateHeroPanel();
+    }
+
+    void CreateHeroPanel()
+    {
+        HeroPanel = Instantiate(HeroPanel) as GameObject;
+        stats = HeroPanel.GetComponent<HeroPanelStats>();
+        stats.HeroName.text = hero.theName;
+        stats.HeroHP.text = "HP: " + hero.curHP + "/" + hero.baseHP;
+        stats.HeroMOM.text = "MOM: " + hero.curMOM + "/" + hero.baseMOM;
+
+        ProgressBar = stats.ProgressBar;
+        HeroPanel.transform.SetParent(HeroPanelSpacer, false);
+    }
+
+    void UpdateHeroPanel()
+    {
+        stats.HeroHP.text = "HP: " + hero.curHP + "/" + hero.baseHP;
+        stats.HeroMOM.text = "MOM: " + hero.curMOM + "/" + hero.baseMOM;
     }
 }
