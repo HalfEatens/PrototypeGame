@@ -42,6 +42,13 @@ public class BattleStateMachine : MonoBehaviour
 
     public GameObject AttackPanel;
     public GameObject EnemySelectPanel;
+    public GameObject AbilityPanel;
+
+    //abilities
+    public Transform ActionSpacer;
+    public Transform AbilitySpacer;
+    public GameObject ActionButton;
+    private List<GameObject> atkBtns = new List<GameObject>();
 
     void Start()
     {
@@ -52,6 +59,7 @@ public class BattleStateMachine : MonoBehaviour
 
         AttackPanel.SetActive(false);
         EnemySelectPanel.SetActive(false);
+        AbilityPanel.SetActive(false);
 
         EnemyButtons();
     }
@@ -112,6 +120,9 @@ public class BattleStateMachine : MonoBehaviour
                     HeroChoice = new HandleTurns();
 
                     AttackPanel.SetActive(true);
+                        
+                        CreateAttackButtons();
+
                     HeroInput = HeroGUI.WAITING;
                 }
             break;
@@ -177,8 +188,33 @@ public class BattleStateMachine : MonoBehaviour
     {
         performList.Add(HeroChoice);
         EnemySelectPanel.SetActive(false);
+
+        //cleanup attackpanel
+        foreach(GameObject atkBtn in atkBtns)
+        {
+            Destroy(atkBtn);
+        }
+        atkBtns.Clear();
+
         HeroesToManage[0].transform.Find("Selector").gameObject.SetActive(false);
         HeroesToManage.RemoveAt(0);
         HeroInput = HeroGUI.ACTIVATE;
+    }
+    //create actionbut
+    void CreateAttackButtons()
+    {
+        GameObject AttackButton = Instantiate(ActionButton) as GameObject;
+        TMP_Text AttackButtonText = AttackButton.transform.Find("Text").gameObject.GetComponent<TMP_Text>();
+        AttackButtonText.text = "Attack";
+        AttackButton.GetComponent<Button>().onClick.AddListener(() => Input1());
+        AttackButton.transform.SetParent(ActionSpacer, false);
+        atkBtns.Add(AttackButton);
+
+        GameObject AbilityAttackButton = Instantiate(ActionButton) as GameObject;
+        TMP_Text AbilityButtonText = AbilityAttackButton.transform.Find("Text").gameObject.GetComponent<TMP_Text>();
+        AttackButtonText.text = "Abilities";
+        //
+        AbilityAttackButton.transform.SetParent(ActionSpacer, false);
+        atkBtns.Add(AbilityAttackButton);
     }
 }

@@ -141,7 +141,7 @@ public class EnemyStateMachine : MonoBehaviour
 
     void DoDamage()
     {
-        float calc_damage = enemy.curATK + Mathf.Pow(enemy.rarityValue, 1/3f)*Mathf.Pow(enemy.lvl, 1.5f) + BSM.performList[0].chosenAttack.attackDamage;
+        float calc_damage = Mathf.Round(enemy.curATK + Mathf.Pow(enemy.rarityValue, 1/3f)*Mathf.Pow(enemy.lvl, 1.5f) + BSM.performList[0].chosenAttack.attackDamage);
         HeroToAttack.GetComponent<HeroStateMachine>().TakeDamage(calc_damage);
         Debug.Log(this.gameObject.name + " did " + calc_damage + " damage to " + HeroToAttack.name);
     }
