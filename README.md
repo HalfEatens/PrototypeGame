@@ -9,6 +9,8 @@ Initially will be like Pokemon, however we will change to be more like Naruto on
 
 ## To do list:
 
+- fix the convoluted messy code  
+
 - Convert to 2D (easy)
 - add proper attacks and abilities
 - setup misc stats and give them proper functionality
