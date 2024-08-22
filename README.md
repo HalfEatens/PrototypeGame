@@ -9,17 +9,34 @@ Initially will be like Pokemon, however we will change to be more like Naruto on
 
 ## To do list:
 
- - Create different stats
- - Types system (Different classes deal dmg to other ones like rock paper scissors)
- - "chase passive" ability that follows a certain attack status.
-(statuses would be like push, pull, knock down and knock up)
- - More complex abilities (inc damage over time)
- - Passives
- - Ult system (team combo)
- - Buffs
- - Simple starter item system
- - 
+- Convert to 2D (easy)
+- add proper attacks and abilities
+- setup misc stats and give them proper functionality
+- figure out the mathematical functions for all the stats
+- implement types (striker, powerhouse ect)
+- team ult ability
 
 
+- Change how the combat system works (make more like naruto online) (probs gonna be difficult at first but the base is there)
 
-banana
+
+- start creating characters, sfx and animations
+- setup the animations (probs will be annoying)
+
+
+- debuffs and buffs
+- add more abilities maybe some skills and passives too
+- maybe create a simple item system
+
+
+- completely change UI
+- cards system
+- level up system
+- star system (forge cards)
+
+
+- banana cards
+
+
+- more gamemodes
+- world, shop, story, things to do, mini games, skins ect. idk 
