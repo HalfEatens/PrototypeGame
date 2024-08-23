@@ -100,7 +100,8 @@ public class HeroStateMachine : MonoBehaviour
                     //change color or something (dead animation)
                     this.gameObject.GetComponent<Renderer>().material.color = Color.grey;
                     //reset input
-                    BSM.HeroInput = BattleStateMachine.HeroGUI.ACTIVATE;
+                    BSM.battleStates = BattleStateMachine.PerformAction.CHECKALIVE;
+                    //BattleStateMachine.PerformAction.CHECKALIVE;
                     alive = false;
                 }
             break;

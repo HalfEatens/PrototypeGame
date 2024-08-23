@@ -12,7 +12,10 @@ public class BattleStateMachine : MonoBehaviour
     {
         WAIT,
         TAKEACTION,
-        PERFORMACTION
+        PERFORMACTION,
+        CHECKALIVE,
+        WIN,
+        LOSE
     }
 
 
@@ -110,6 +113,31 @@ public class BattleStateMachine : MonoBehaviour
             case (PerformAction.PERFORMACTION):
                 //idle
             break;
+            case (PerformAction.CHECKALIVE):
+                if(HerosInBattle.Count < 1)
+                {
+                    battleStates = PerformAction.LOSE;
+                    //lose game
+                }
+                else if(EnemiesInBattle.Count < 1)
+                {
+                    battleStates = PerformAction.WIN;
+                    //win game
+                }
+                else
+                {
+                    //call func
+                    clearAttackPanel();
+                    HeroInput = HeroGUI.ACTIVATE;
+                    battleStates = PerformAction.WAIT;
+                }
+            break;
+            case (PerformAction.LOSE):
+
+            break;
+            case (PerformAction.WIN):
+
+            break;
         }
 
         switch (HeroInput)
@@ -188,19 +216,27 @@ public class BattleStateMachine : MonoBehaviour
     void HeroInputDone()
     {
         performList.Add(HeroChoice);
-        EnemySelectPanel.SetActive(false);
-
+        clearAttackPanel();
         //cleanup attackpanel
+        
+        HeroesToManage[0].transform.Find("Selector").gameObject.SetActive(false);
+        HeroesToManage.RemoveAt(0);
+        HeroInput = HeroGUI.ACTIVATE;
+    }
+
+    void clearAttackPanel()
+    {
+        EnemySelectPanel.SetActive(false);
+        AttackPanel.SetActive(false);
+        AbilityPanel.SetActive(false);
+
         foreach(GameObject atkBtn in atkBtns)
         {
             Destroy(atkBtn);
         }
         atkBtns.Clear();
-
-        HeroesToManage[0].transform.Find("Selector").gameObject.SetActive(false);
-        HeroesToManage.RemoveAt(0);
-        HeroInput = HeroGUI.ACTIVATE;
     }
+
     //create actionbut
     void CreateAttackButtons()
     {
