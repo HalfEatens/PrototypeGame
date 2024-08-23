@@ -47,12 +47,15 @@ public class BattleStateMachine : MonoBehaviour
     public GameObject EnemySelectPanel;
     public GameObject AbilityPanel;
 
-    //abilities
+    //attacks hero
     public Transform ActionSpacer;
     public Transform AbilitySpacer;
     public GameObject ActionButton;
     public GameObject AbilityButton;
     private List<GameObject> atkBtns = new List<GameObject>();
+
+    //enemy buttons
+    private List<GameObject> enemyBtns = new List<GameObject>();
 
     void Start()
     {
@@ -129,14 +132,18 @@ public class BattleStateMachine : MonoBehaviour
                     //call func
                     clearAttackPanel();
                     HeroInput = HeroGUI.ACTIVATE;
-                    battleStates = PerformAction.WAIT;
+                    //battleStates = PerformAction.WAIT;
                 }
             break;
             case (PerformAction.LOSE):
-
+                Debug.Log("lose");
             break;
             case (PerformAction.WIN):
-
+                Debug.Log("win");
+                for(int i = 0; i < HerosInBattle.Count; i++)
+                {
+                    HerosInBattle[i].GetComponent<HeroStateMachine>().currentState = HeroStateMachine.TurnState.WAITING;
+                }
             break;
         }
 
@@ -179,8 +186,15 @@ public class BattleStateMachine : MonoBehaviour
         performList.Add(input);
     }
 
-    void EnemyButtons()
+    public void EnemyButtons()
     {
+        //cleanup
+        foreach(GameObject enemyBtn in enemyBtns)
+        {
+            Destroy(enemyBtn);
+        }
+        enemyBtns.Clear();
+        //create buttons
         foreach(GameObject enemy in EnemiesInBattle)
         {
             GameObject newButton = Instantiate(enemyButton) as GameObject;
@@ -194,6 +208,7 @@ public class BattleStateMachine : MonoBehaviour
             button.EnemyPrefab = enemy;
 
             newButton.transform.SetParent(Spacer, false);
+            enemyBtns.Add(newButton);
         }
     }
 

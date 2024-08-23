@@ -153,15 +153,20 @@ public class HeroStateMachine : MonoBehaviour
         BSM.performList.RemoveAt(0);
 
         //reset BSM -> wait
-        BSM.battleStates = BattleStateMachine.PerformAction.WAIT;
-
+        if(BSM.battleStates != BattleStateMachine.PerformAction.WIN && BSM.battleStates != BattleStateMachine.PerformAction.LOSE)
+        {
+            BSM.battleStates = BattleStateMachine.PerformAction.WAIT;
+            //reset enemy state
+            currentCooldown = 0f;
+            currentState = TurnState.PROCESSING;
+        }
+        else
+        {
+            currentState = TurnState.WAITING;
+        }
+        
         //end coroutine
         actionStarted = false;
-
-        //reset enemy state
-        currentCooldown = 0f;
-        currentState = TurnState.PROCESSING;
-
     }
 
     private bool MoveTowardsEnemy(Vector3 target)

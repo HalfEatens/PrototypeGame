@@ -1710,7 +1710,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1260990514031230645, guid: 40e791950403f7246b17e8e27936bc0b, type: 3}
       propertyPath: hero.curATK
-      value: 7.5
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1260990514031230645, guid: 40e791950403f7246b17e8e27936bc0b, type: 3}
       propertyPath: hero.curDEF
@@ -1726,7 +1726,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1260990514031230645, guid: 40e791950403f7246b17e8e27936bc0b, type: 3}
       propertyPath: hero.baseATK
-      value: 7.5
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1260990514031230645, guid: 40e791950403f7246b17e8e27936bc0b, type: 3}
       propertyPath: hero.baseDEF
@@ -1839,7 +1839,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1260990514031230645, guid: 40e791950403f7246b17e8e27936bc0b, type: 3}
       propertyPath: hero.curATK
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1260990514031230645, guid: 40e791950403f7246b17e8e27936bc0b, type: 3}
       propertyPath: hero.curDEF
@@ -1855,7 +1855,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1260990514031230645, guid: 40e791950403f7246b17e8e27936bc0b, type: 3}
       propertyPath: hero.baseATK
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1260990514031230645, guid: 40e791950403f7246b17e8e27936bc0b, type: 3}
       propertyPath: hero.baseDEF
@@ -2067,7 +2067,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1260990514031230645, guid: 40e791950403f7246b17e8e27936bc0b, type: 3}
       propertyPath: hero.curATK
-      value: 7.5
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1260990514031230645, guid: 40e791950403f7246b17e8e27936bc0b, type: 3}
       propertyPath: hero.curDEF
@@ -2087,7 +2087,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1260990514031230645, guid: 40e791950403f7246b17e8e27936bc0b, type: 3}
       propertyPath: hero.baseATK
-      value: 7.5
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1260990514031230645, guid: 40e791950403f7246b17e8e27936bc0b, type: 3}
       propertyPath: hero.baseDEF
